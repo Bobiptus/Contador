@@ -1,47 +1,8 @@
-def contar_vocalA(cadena):
-	contador = 0
-	for letra in cadena:
-		if letra.lower() in "a":
-			contador += 1
-	return contador
-
-def contar_vocalE(cadena):
-	contador = 0
-	for letra in cadena:
-		if letra.lower() in "e":
-			contador += 1
-	return contador
-
-def contar_vocalI(cadena):
-	contador = 0
-	for letra in cadena:
-		if letra.lower() in "i":
-			contador += 1
-	return contador
-
-def contar_vocalO(cadena):
-	contador = 0
-	for letra in cadena:
-		if letra.lower() in "o":
-			contador += 1
-	return contador
-
-def contar_vocalU(cadena):
-	contador = 0
-	for letra in cadena:
-		if letra.lower() in "u":
-			contador += 1
-	return contador
+diccionario = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
 
 palabra = input("Dame la palabra: ")
-conteoA = contar_vocalA(palabra)
-conteoE = contar_vocalE(palabra)
-conteoI = contar_vocalI(palabra)
-conteoO = contar_vocalO(palabra)
-conteoU = contar_vocalU(palabra)
+for letra in palabra:
+    if letra.lower() in diccionario:
+        diccionario[letra.lower()] += 1
 
-print ("Letras A: ",conteoA)
-print ("Letras E: ",conteoE)
-print ("Letras I: ",conteoI)
-print ("Letras O: ",conteoO)
-print ("Letras U: ",conteoU)
+print("vocales: ",diccionario)
