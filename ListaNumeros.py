@@ -1,7 +1,8 @@
-lista = [0,7,2,4,6,67,4,8,12]
+lista = [10,7,17,4,12]
 i = int(0)
+j = len(lista) - 2
 
-while  (i < 7):
+while  (i < j):
   
   primernumero = float (lista[i])
   segundonumero = float (lista[i+1])
